@@ -2142,11 +2142,11 @@ input, select, textarea {
 		color: #000000;
 		display: block;
 		font-family: "Raleway", Helvetica, sans-serif;
-		font-size: 14pt;
+		font-size: 1rem;
 		font-weight: 600;
-		letter-spacing: 0.175em;
-		line-height: 14pt;
-		margin: 0 0 1rem 0;
+		letter-spacing: 0.175rem;
+		line-height: 1.25rem;
+		margin: 0 0 0.5rem 0;
 		
 	}
 
@@ -2291,7 +2291,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		label {
-			font-size: 0.675rem;
+			font-size: 1rem;
 		}
 
 		input[type="checkbox"] + label,
@@ -2304,7 +2304,7 @@ input, select, textarea {
 	@media screen and (max-width: 360px) {
 
 		label {
-			font-size: 0.675rem;
+			font-size: 1rem;
 		}
 
 		input[type="checkbox"] + label,
