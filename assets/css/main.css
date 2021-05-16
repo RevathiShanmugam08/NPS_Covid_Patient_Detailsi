@@ -216,9 +216,9 @@ input, select, textarea {
 	h1 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 2rem;
-		font-weight: 700;
+		font-weight: 500;
 		letter-spacing: -0.05em;
-		line-height: 1.1;
+		line-height: 0.75;
 		margin: 0 0 0.5rem 0;
 		text-transform: none;
 	}
