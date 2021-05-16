@@ -429,7 +429,6 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									<div class="field">
 										<input type="file" name="covid_test" id="covid_test" placeholder="Upload" rows="7" />
 									</div>
-									<h3>Whatsapp sharing</h3> 
 									<button onclick="share()" class="mobileShow"> Share to WhatsApp </button>   
 								
 									<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js">   
@@ -439,9 +438,18 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									// User-defined function to share some message on WhatsApp   
 									function share() {   
 										// collet the user input   
-									var requirement = $("input[name=requirement]").val();   
+									var requirement = $("input[name=requirement]").val(); 
+									var patientname = $("input[name=patientname]").val(); 
+									var patientage = $("input[name=patientage]").val(); 
+									var location = $("input[name=location]").val(); 
+									var SP02 = $("input[name=SP02]").val(); 
+
 												// JavaScript function to open URL in new window   
-										window.open( "whatsapp://send?text=" + requirement, '_blank');   
+										window.open( "whatsapp://send?text=Requirement:"+ requirement +
+										"Patient Name:"+ patientname +
+										"Patient Age:"+ patientage +
+										"Location:"+ location +
+										"SPO2 Level:"+ SP02, '_blank');   
 									}   
 									</script>   
 								</div>
