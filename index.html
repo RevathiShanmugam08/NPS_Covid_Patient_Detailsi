@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Covid'19 Patient Form is built by NPS (Network of Professional Social Workers in India)
+	This form aim at collecting details of covid patients for bed allocation and routing 
+	Developer: Revathi Shanmugam
 -->
 <html>
 	<head>
@@ -404,59 +404,100 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 				<!-- Section -->
 					<section>
 						<header>
-							<h2>NPS Covid Volunteering</h2>
-							<h3>Patient Details</h3>
+							<img src= "C:\Users\revat\Downloads\Sample.png" alt="nps_logo"> 
+							<h1>Patient Details</h1>
+							<h2>Bed Request Form</h2>
+							<h3>Please provide us with Covid'19 patient details in the mentioned format</h3>
+							<h3>NPS Covid'19 Volunteering will do it's best to help you find the requested Bed</h3>
 						</header>
 						<div class="content">
-							<p><strong>Share us the patient details via WhatsApp</strong></p>
 							<form action = "POST" data-netlify="true">
 								<div class="fields">
-									<div class="field half">
-										<input type="text" name="requirement" id="requirement" placeholder="Requirement" />
-									</div>
-									<div class="field half">
-										<input type="text" name="patientname" id="patientname" placeholder="Patient Name" />
+									<div class="field">
+										<label for="requirement">Requirement</label>
+										<select id="requirement" name="requirement">
+											<option default>Select your option</option>
+											<option value="Oxygen">Oxygen (O2) Bed</option>
+											<option value="ICU">ICU</option> 
+											<option value="Ventilator">Ventilator Bed</option>
+											<option value="NonOxygen">Non-Oxygen (Normal) Bed</option>
+											<option value="any">Any of the above</option>
+										</select>
 									</div>
 									<div class="field">
+										<label for="patientname">Patient Name</label>
+										<input type="text" name="patientname" id="patientname" placeholder="Patient Name" required/>
+									</div>
+									<div class="field">
+										<label for="patientage">Patient Age</label>
 										<input type="text" name="patientage" id="patientage" placeholder="Patient Age" />
 									</div>
 									<div class="field">
+										<label for="patientphone">Patient Phone Number</label>
+										<input type="text" name="patientphone" id="patientphone" placeholder="Patient Phone Number" />
+									</div>
+									<div class="field">
+										<label for="location">Location (District/Area)</label>
 										<input type="text" name="location" id="location" placeholder="Patient Location" />
 									</div>
 									<div class="field">
-										<input type="text" name="SP02" id="SPO2" placeholder="SPO2 Level" />
+										<label for="SP02">SPO2 Level (%)</label>
+										<input type="text" name="SP02" id="SPO2" placeholder="SPO2" />
 									</div>
 									<div class="field">
-										<input type="file" name="covid_test" id="covid_test" placeholder="Upload" rows="7" />
+										<label for="CTSev">CT Severity (Please mention if it's out of 40 or 25)</label>
+										<input type="text" name="CTSev" id="CTSev" placeholder="xx/yy" />
+									</div>
+									<div class="field">
+										<label for="hospital">Preferred Hospital</label>
+										<select id="hospital" name="hospital">
+											<option default>Select your option</option>
+											<option value="Gov">Government Hospital</option>
+											<option value="Private">Private Hospital</option>
+											<option value="any">Any of the above</option>
+										</select>
+									</div>
+									<div class="field">
+										<label for="attendername">Attender's Name</label>
+										<input type="text" name="attendername" id="attendername" placeholder="Attender's Name" />
+									</div>
+									<div class="field">
+										<label for="attenderphone">Attender's Phone Number</label>
+										<input type="text" name="attenderphone" id="attenderphone" placeholder="Attender's Phone Number" />
+									</div>
+									<div class="field">
+										<label for="ctreport">CT Report File</label>
+										<input type="file" name="ctreport" id="ctreport" placeholder="Upload" rows="7" />
 									</div>
 									<button onclick="share()" class="mobileShow"> Share to WhatsApp </button>   
-								
 									<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js">   
 									</script>   
 									
 									<script>   
 									// User-defined function to share some message on WhatsApp   
 									function share() {   
-										// collet the user input   
+										// collect the user input   
 									var requirement = $("input[name=requirement]").val(); 
 									var patientname = $("input[name=patientname]").val(); 
 									var patientage = $("input[name=patientage]").val(); 
+									var patientphone = $("input[name=patientphone]").val(); 
 									var location = $("input[name=location]").val(); 
 									var SP02 = $("input[name=SP02]").val(); 
-
-												// JavaScript function to open URL in new window   
-										// var output = "Requirement:"+ requirement + "<br>" +
-										// "Patient Name: "+ patientname + "\r\n" +	
-										// "Patient Age: "+ patientage + " years" + "\n" +
-										// "Location: "+location + "\n" +
-										// "SPO2 Level: "+ SP02 +"%";
-										
-									;
-										window.open("whatsapp://send?text=Requirement: "+ requirement + "%0A" +
-										"Patient Name: "+ patientname + "%0A" +	
-										"Patient Age: "+ patientage + " years" + "%0A" +
-										"Location: "+location + "%0A" +
-										"SPO2 Level: "+ SP02 +"%", '_blank');   
+									var CTSev = $("input[name=CTSev]").val(); 
+									var hospital = $("input[name=hospital]").val(); 
+									var attendername = $("input[name=attendername]").val(); 
+									var attenderphone = $("input[name=attenderphone]").val();
+									
+										window.open("whatsapp://send?text=1) Requirement: "+ requirement + "%0A" +
+										"2) Patient Name: "+ patientname + "%0A" +	
+										"3) Patient Age: "+ patientage + " years" + "%0A" +
+										"4) Patient Phone Number: "+ patientphone + "%0A" +	
+										"5) Location: "+ location + "%0A" +
+										"6) SPO2 Level: "+ SP02 + "%" + "%0A" +	
+										"7) CT Severity: "+ CTSev + "%0A" +
+										"8) Preferred Hospital: "+hospital + "%0A" +
+										"9) Attender's Name: "+attendername + "%0A" +
+										"10) Attender's Phone Number: "+ attenderphone , '_blank');   
 									}   
 									</script>   
 								</div>
@@ -492,7 +533,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 					</section>
 
 				<!-- Copyright -->
-					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+					<div class="copyright">&copy; NPS. All rights reserved</a>.</div>
 
 			</div>
 
