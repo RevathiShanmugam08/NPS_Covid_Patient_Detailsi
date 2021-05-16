@@ -227,7 +227,7 @@ input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 400;
-		margin: 0 0 0 0;
+		margin: 0 0 0.5rem 0;
 	}
 
 	h3 {
@@ -2141,12 +2141,12 @@ input, select, textarea {
 	label {
 		color: #000000;
 		display: block;
-		font-family: "Raleway", Helvetica;
-		font-size: 2rem;
-		font-weight: 800;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 8pt;
+		font-weight: 600;
 		letter-spacing: 0.175em;
-		line-height: 2.25rem;
-		margin: 0 0 0.5rem 0;
+		line-height: 1.75;
+		margin: 0 0 1rem 0;
 		
 	}
 
