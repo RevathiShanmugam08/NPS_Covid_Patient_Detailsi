@@ -423,11 +423,11 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 										<label for="requirement">Requirement</label>
 										<select id="requirement" name="requirement">
 											<option default>Select your option</option>
-											<option value="Oxygen">Oxygen (O2) Bed</option>
+											<option value="Oxygen (O2) Bed">Oxygen (O2) Bed</option>
 											<option value="ICU">ICU</option> 
-											<option value="Ventilator">Ventilator Bed</option>
-											<option value="NonOxygen">Non-Oxygen (Normal) Bed</option>
-											<option value="any">Any of the above</option>
+											<option value="Ventilator Bed">Ventilator Bed</option>
+											<option value="Non-Oxygen (Normal) Bed">Non-Oxygen (Normal) Bed</option>
+											<option value="Any Bed">Any of the above</option>
 										</select>
 									</div>
 									<div class="field">
@@ -458,9 +458,9 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 										<label for="hospital">Preferred Hospital</label>
 										<select id="hospital" name="hospital">
 											<option default>Select your option</option>
-											<option value="Gov">Government Hospital</option>
-											<option value="Private">Private Hospital</option>
-											<option value="any">Any of the above</option>
+											<option value="Government Hospital">Government Hospital</option>
+											<option value="Private Hospital">Private Hospital</option>
+											<option value="Any (Govt/Private)">Any of the above</option>
 										</select>
 									</div>
 									<div class="field">
@@ -491,7 +491,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									var location = $("input[name=location]").val(); 
 									var SP02 = $("input[name=SP02]").val(); 
 									var CTSev = $("input[name=CTSev]").val(); 
-									var hospital = $("input[name=hospital]").val(); 
+									var hospital = $("select[name=hospital]").val(); 
 									var attendername = $("input[name=attendername]").val(); 
 									var attenderphone = $("input[name=attenderphone]").val();
 									
