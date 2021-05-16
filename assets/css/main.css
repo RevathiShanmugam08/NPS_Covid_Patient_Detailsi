@@ -203,8 +203,8 @@ input, select, textarea {
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-weight: 600;
 		letter-spacing: 0.175em;
-		line-height: 1.75;
-		margin: 0 0 1.5rem 0;
+		line-height: 1;
+		margin: 0 0 0 0;
 		
 	}
 
@@ -219,14 +219,15 @@ input, select, textarea {
 		font-weight: 700;
 		letter-spacing: -0.05em;
 		line-height: 1.1;
-		margin: 0 0 1.5rem 0;
+		margin: 0 0 0.5rem 0;
 		text-transform: none;
 	}
 
 	h2 {
-		font-size: 1.5rem;
-		font-weight: 800;
-		margin: 0 0 2rem 0;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		margin: 0 0 0.5rem 0;
 	}
 
 	h3 {
