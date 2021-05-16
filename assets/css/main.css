@@ -2145,8 +2145,8 @@ input, select, textarea {
 		font-size: 2rem;
 		font-weight: 800;
 		letter-spacing: 0.175em;
-		line-height: 1.75;
-		margin: 0 0 0 0;
+		line-height: 2.25rem;
+		margin: 0 0 0.5rem 0;
 		
 	}
 
