@@ -12,6 +12,43 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<title>Send WhatsApp Message</title>
+ 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  			<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.1/css/flag-icon.css" rel="stylesheet" crossorigin="anonymous">
+  			<script type="text/javascript" src="mobiledetect.min.js" async></script>
+  			<script type="text/javascript">
+ 			 const setup = (function () {
+   			 // console.log('setup');
+				document.getElementById('sendMessage').onsubmit = function (e) {
+				e.preventDefault();
+				console.log('click');
+				const country = '55';
+				const number = (document.getElementById('number').value || '')
+					.replace(/\D/g, '')
+					.replace(new RegExp(`^${country}`), '');
+				const text = document.getElementById('text').value;
+				if (!number) {
+					alert('Invalid number');
+					return;
+				}
+				// const link = `https://wa.me/${country}${number}?text=${text}`;
+				link = `https://web.whatsapp.com/send?phone=${country}${number}&text=${text}`;
+				if ((new MobileDetect(window.navigator.userAgent)).mobile()) {
+					link = `https://api.whatsapp.com/send?phone=${country}${number}&text=${text}`;
+				}
+				console.log(number, link);
+				window.open(link);
+				};
+				})
+				if (window.attachEvent) {
+					window.attachEvent('onload', setup);
+				} else {
+					window.addEventListener('load', setup, false);
+				}
+			</script>
 	</head>
 	<body class="is-preload">
 
@@ -430,9 +467,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 										<input type="file" name="covid_test" id="covid_test" placeholder="Upload" rows="7" />
 									</div>
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
-								</ul>
+								<button id="send" class="btn btn-primary btn-lg btn-block">Abrir WhatsApp</button>
 							</form>
 						</div>
 						<footer>
