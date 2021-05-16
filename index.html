@@ -445,14 +445,15 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									var SP02 = $("input[name=SP02]").val(); 
 
 												// JavaScript function to open URL in new window   
-										var output = "Requirement:"+ requirement + white-space
+										var output = "Requirement:"+ requirement + "<br>" +
 										"Patient Name: "+ patientname + "\r\n" +	
 										"Patient Age: "+ patientage + " years" + "\n" +
 										"Location: "+location + "\n" +
 										"SPO2 Level: "+ SP02 +"%";
 										
-										window.open( "whatsapp://send?text=" +output, 
+										//window.open( "whatsapp://send?text=" +output, 
 										'_blank');
+										window.open("whatsapp://send?text=" ,"_blank").document.write(output);
 										//Requirement: \n"+ requirement + "\n" +
 										// "Patient Name: "+ patientname + "\n" +	
 										// "Patient Age: "+ patientage + " years" + "\n" +
