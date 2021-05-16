@@ -2141,12 +2141,12 @@ input, select, textarea {
 	label {
 		color: #000000;
 		display: block;
-		font-family: "Raleway", Helvetica, sans-serif;
-		font-size: 1.25rem;
-		font-weight: 600;
+		font-family: "Raleway", Helvetica;
+		font-size: 2rem;
+		font-weight: 800;
 		letter-spacing: 0.175em;
 		line-height: 1.75;
-		margin: 0 0 1rem 0;
+		margin: 0 0 0 0;
 		
 	}
 
